@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Liste des Utilisateurs</title>
+</head>
+<body>
+       <!-- nav barre -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="modifier.html">Modifier Employé</a></li>
+            <li><a href="ajouter.html">Ajouter un Projet</a></li>
+            <li><a href="utilisateurs.html">Entrée des Utilisateurs</a></li>
+            <li><a href="liste-utilisateurs.html">Liste des Utilisateurs</a></li>
+        </ul>
+    </nav>
+
+    <!--debu du code  formulaire tableau pour les utilisateurs :) -->
+
+    <div class="form-container">
+        <h1>Entrée des Utilisateurs</h1>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Entrez le nom" required />
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" placeholder="Entrez le prénom" required />
+            </div>
+            <div class="form-group">
+                <label for="poste">Poste</label>
+                <input type="text" id="poste" placeholder="Entrez le poste" required />
+            </div>
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" placeholder="Entrez le numéro de téléphone" required />
+            </div>
+            <div class="form-button">
+                <button type="submit">Ajouter Utilisateur</button>
+            </div>
+        </form>
+    </div>
+ 
+ <!-- affiche des utilisateur sous forme de tableau -->
+
+ <div class="form-container">
+    <h2>Liste des Utilisateurs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Poste</th>
+                <th>Téléphone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">  
+            <!--affichage des utilisateurs dynamique -->
+        </tbody>
+    </table>
+</div>
+
+    <script>
+        const userForm = document.getElementById('userForm');
+        const userTableBody = document.getElementById('userTableBody');
+
+        userForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            
+            // recupere les valeurs des cchamps 
+            const nom = document.getElementById('nom').value;
+            const prenom = document.getElementById('prenom').value;
+            const poste = document.getElementById('poste').value;
+            const telephone = document.getElementById('telephone').value;
+
+            
+            // cree une nouvelle ligne dans le tableau pour ajout d'un nouveau nom
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${nom}</td>
+                <td>${prenom}</td>
+                <td>${poste}</td>
+                <td>${telephone}</td>
+                <td><button onclick="supprimerUtilisateur(this)">Supprimer</button></td>
+            `;
+
+          
+            // ajout de la ligne dans le tableau 
+            userTableBody.appendChild(newRow);
+
+            // Réinitialisation du formulaire
+        
+            userForm.reset();
+        });
+
+        
+        // supp un utilisateur du tableau 
+        function supprimerUtilisateur(button) {
+            const row = button.parentElement.parentElement;
+            userTableBody.removeChild(row);
+        }
+    </script>
+</body>
+</html>
