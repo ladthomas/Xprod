@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Entrée des Utilisateurs</title>
+</head>
+<body>
+
+    <!-- nav barre  -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="modifier.html">Modifier Employé</a></li>
+            <li><a href="ajouter.html">Ajouter un Projet</a></li>
+            <li><a href="utilisateurs.html">Entrée des Utilisateurs</a></li>
+            <li><a href="liste-utilisateurs.html">Liste des Utilisateurs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Formulaire utilisateurs-->
+    <div class="form-container">
+        <h1>Entrée des Utilisateurs</h1>
+        <form action="/ajouter-utilisateur" method="POST">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required />
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrez le prénom" required />
+            </div>
+            <div class="form-group">
+                <label for="poste">Poste</label>
+                <input type="text" id="poste" name="poste" placeholder="Entrez le poste" required />
+            </div>
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Entrez le numéro de téléphone" required />
+            </div>
+            <div class="form-button">
+                <button type="submit">Ajouter Utilisateur</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
