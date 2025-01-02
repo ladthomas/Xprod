@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Modifier</title>
+</head>
+<body>
+
+    <!-- nav barre  -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="modifier.html">Modifier Employé</a></li>
+            <li><a href="ajouter.html">Ajouter un Projet</a></li>
+            <li><a href="utilisateurs.html">Entrée des Utilisateurs</a></li>
+            <li><a href="liste-utilisateurs.html">Liste des Utilisateurs</a></li>
+        </ul>
+    </nav>
+
+    <!-- le reste du code -->
+    <div class="form-container">
+        <h1>Modifier Employé</h1>
+        <form action="/modifier-employe" method="POST">    
+            <input type="hidden" name="id_employe" value="1" />
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez le nom" required />
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Entrez le prénom" required />
+            </div>
+            <div class="form-group">
+                <label for="poste">Poste</label>
+                <input type="text" id="poste" name="poste" placeholder="Entrez le poste" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Entrez l'email" required />
+            </div>
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="Entrez le téléphone" required />
+            </div>
+            <div class="form-button">
+                <button type="submit">Modifier</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
