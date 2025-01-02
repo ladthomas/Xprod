@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Consolas", "Courier New", monospace, Arial, sans-serif;
+    background-color: #f9f9f9; /* Fond clair */
+    color: #333; /* Texte sombre */
+    padding-top: 60px; /* Décalage pour la navbar */
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #007acc; /* Fond bleu vif */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #cce7ff; /* Couleur claire au survol */
+    background-color: #005f9e; /* Fond au survol */
+    border-radius: 5px;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #569cd6;
+    box-shadow: 0 0 5px rgba(86, 156, 214, 0.7);
+}
+
+/* Buttons */
+.form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button button,
+table button {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button button:hover,
+table button:hover {
+    background-color: #005f9e;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007acc;
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+table button {
+    background-color: #e74c3c;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+table button:hover {
+    background-color: #c0392b;
+}
